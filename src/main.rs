@@ -19,7 +19,7 @@ struct Args {
     path: String,
 
     /// Reporting threshold
-    #[arg(short, long, default_value_t = 4)]
+    #[arg(short, long, default_value_t = 16)]
     threshold: u32,
 
     /// Check file first 4 Mib
