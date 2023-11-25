@@ -70,7 +70,6 @@ fn is_zero(buf: &[u8]) -> bool {
 
 fn main() -> Result<()> {
     env_logger::init();
-    rayon::ThreadPoolBuilder::new().num_threads(8).build_global().unwrap();
 
     let args = Args::parse();
     let options = MatchOptions {
