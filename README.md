@@ -5,10 +5,15 @@ zfs 2.1/2.2 has a silent file corruption bug, issue [15526](https://github.com/o
 Usage: zfs-issue-15526-check-file [OPTIONS]
 
 Options:
-  -p, --path <PATH>            [default: ./**/*.*]
-  -t, --threshold <THRESHOLD>  [default: 4]
+  -p, --path <PATH>            Scan path, glob format [default: ./**/*.*]
+  -t, --threshold <THRESHOLD>  Reporting threshold [default: 16]
+  -f                           Check file first 4 Mib
+  -h, --help                   Print help
+  -V, --version                Print version
 ```
 
 `--path` option uses the path argument of [glob](https://crates.io/crates/glob)
 
-`--threshold` option configures the error threshold and prints the file when multiple 4kb zero bytes appear continuously.
+`--threshold` print an alert when zero byte blocks are detected consecutively.
+
+`-f` Quickly detect begin of the file (4 Mib range).
