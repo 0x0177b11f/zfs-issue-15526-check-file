@@ -12,6 +12,8 @@ Options:
   -V, --version                Print version
 ```
 
+> set RUST_LOG=debug show scan files in logging
+
 `--path` option uses the path argument of [glob](https://crates.io/crates/glob)
 
 Example:
