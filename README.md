@@ -14,6 +14,13 @@ Options:
 
 `--path` option uses the path argument of [glob](https://crates.io/crates/glob)
 
+Example:
+
+* `/XXX/**/*.*` : Any file in the `/XXX` directory (recursively into all subdirectories)
+* `/XXX/*.*` : Any file in the `/XXX` directory (no subdirectories)
+* `/XXX/**/*.zip` : Any zip file in the `/XXX` directory (recursively into all subdirectories)
+* `/XXX/*.zip` : Any zip file in the `/XXX` directory (no subdirectories)
+
 `--threshold` print an alert when zero byte blocks are detected consecutively.
 
 `-f` Quickly detect begin of the file (4 Mib range).
