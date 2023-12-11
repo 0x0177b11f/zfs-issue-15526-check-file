@@ -1,3 +1,4 @@
+# zfs-issue-15526-check-file
 
 zfs 2.1/2.2 has a silent file corruption bug, issue [15526](https://github.com/openzfs/zfs/issues/15526) This tool is used to find any zero-byte blocks (4kb * n) dubious file
 
@@ -26,3 +27,11 @@ Example:
 `--threshold` print an alert when zero byte blocks are detected consecutively.
 
 `-f` Quickly detect begin of the file (4 Mib range).
+
+## Running with nix
+
+You don't even need Rust installed to run this tool if you have Nix:
+
+- [Get Nix](https://nixos.org)
+- [Enable flakes](https://nixos.wiki/wiki/Flakes), either temporarily (by adding `--experimental-features 'nix-command flakes'` to the following command, or setting your system config)
+- Run: `nix run github:0x0177b11f/zfs-issue-15526-check-file -- [options]`
